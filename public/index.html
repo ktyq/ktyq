@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>title</title>
+    <link rel="icon" href="../assets/favicon/favicon.gif" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta http-equiv="Cache-Control" content="no-store">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    img-src 'self';
+    script-src 'self' 'nonce-13579';
+    style-src 'self' 'unsafe-inline';
+    object-src 'none';">
+
+    <link rel="stylesheet" href="../assets/styles/global.css" type="text/css" media="all">
+
+    <style>
+        /* Flex column container */
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: 12px;
+        }
+
+        /* Flex row container */
+        .flex-container2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Outline box */
+        .outline {
+            outline: 3px solid #E4D4E6;
+            margin: 12px;
+            max-width: 600px;
+            /* restrict max width */
+            width: 100%;
+            /* allow scaling */
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            /* center inner content horizontally */
+        }
+
+        .container {
+            position: relative;
+            color: var(--color-primary);
+            width: 100%;
+            max-width: 600px;
+            background-color: rgba(228, 212, 230, 0.2);
+            padding: 16px;
+            border-radius: 12px;
+            outline: 3px solid #E4D4E6;
+            box-sizing: border-box;
+        }
+
+        /* Inner dashed lines using pseudo-elements */
+        .container::before,
+        .container::after {
+            content: "";
+            position: absolute;
+            pointer-events: none;
+        }
+
+        /* Top-right dashed line */
+        .container::before {
+            top: 8px;
+            right: 8px;
+            width: 30%;
+            height: 2px;
+            border-radius: 1px;
+            background: repeating-linear-gradient(to right,
+                    #E4D4E6 0px,
+                    #E4D4E6 4px,
+                    transparent 4px,
+                    transparent 8px
+                );
+            transform: translateX(-5px);
+        }
+
+        /* Bottom-left dashed line */
+        .container::after {
+            bottom: 8px;
+            left: 8px;
+            width: 30%;
+            height: 2px;
+            border-radius: 1px;
+            background: repeating-linear-gradient(to right,
+                    #E4D4E6 0px,
+                    #E4D4E6 4px,
+                    transparent 4px,
+                    transparent 8px);
+            transform: translateX(10px);
+        }
+
+        .grid-container {
+            margin-top: 8px;
+            margin-bottom: 8px;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 12px;
+            justify-items: center;
+            padding: 0 32px;
+        }
+
+        .top-icon {
+            height: 32px;
+            width: 32px;
+        }
+
+        .btn {
+            width: 100%;
+        }
+    </style>
+
+<body>
+    <div class="flex-container">
+        <div style="height:128px;"></div>
+
+
+        <div>
+            <div class="outline">
+                <div class="container">
+                    <div class="flex-container2">
+                        <img src="../assets/icons/sparkle-fill-svgrepo-com.svg" alt="icon" class="top-icon" />
+                        <h3>find your way...</h3>
+                    </div>
+
+                    <div class="grid-container">
+                        <a href="links.html?page=misc" class="btn _grow">misc</a>
+                        <a href="links.html?page=know" class="btn _grow">know</a>
+                        <a href="links.html?page=code" class="btn _grow">code</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="star-layer1" class="star-layer"></div>
+        <div id="star-layer2" class="star-layer"></div>
+        <div id="star-layer3" class="star-layer"></div>
+</body>
+
+</html>
+<script nonce="13579" src="../assets/scripts/stars.js"></script>
+<script nonce="13579">
+    document.addEventListener('keydown', function (event) {
+        if (event.key === "Escape") {
+            window.history.back(); // goes back one page
+        }
+    });
+</script>

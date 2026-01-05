@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>404 not found</title>
+
+    <link rel="icon" href="../assets/favicon/favicon.gif" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta http-equiv="Cache-Control" content="no-store">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    img-src 'self';
+    script-src 'self' 'nonce-13579';
+    style-src 'self' 'unsafe-inline';
+    object-src 'none';">
+
+    <link rel="stylesheet" href="../assets/styles/global.css">
+    <style>
+        #bg-404-layer {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .bg-404 {
+            position: absolute;
+            font-size: clamp(2rem, 8vw, 6rem);
+            font-weight: 800;
+            color: rgba(255, 255, 255, 0.05);
+            white-space: nowrap;
+        }
+
+        .bg-404:nth-child(1) {
+            top: 3%;
+            left: 3%;
+        }
+
+        .bg-404:nth-child(2) {
+            top: 7%;
+            left: 80%;
+        }
+
+        .bg-404:nth-child(3) {
+            top: 10%;
+            left: 40%;
+        }
+
+        .bg-404:nth-child(4) {
+            top: 35%;
+            left: 2%;
+        }
+
+        .bg-404:nth-child(5) {
+            top: 30%;
+            left: 50%;
+        }
+
+        .bg-404:nth-child(6) {
+            top: 25%;
+            left: 75%;
+        }
+
+        .bg-404:nth-child(7) {
+            top: 60%;
+            left: 15%;
+        }
+
+        .bg-404:nth-child(8) {
+            top: 49%;
+            left: 40%;
+        }
+
+        .bg-404:nth-child(9) {
+            top: 65%;
+            left: 70%;
+        }
+
+        .bg-404:nth-child(10) {
+            top: 78%;
+            left: 10%;
+        }
+
+        .bg-404:nth-child(11) {
+            top: 82%;
+            left: 45%;
+        }
+
+        .bg-404:nth-child(12) {
+            top: 85%;
+            left: 85%;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            gap: 1rem;
+        }
+
+        .top-icon {
+            width: 64px;
+            height: 64px;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            pointer-events: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="bg-404-layer">
+        <span class="bg-404">404</span>
+        <span class="bg-404">404</span>
+        <span class="bg-404">404</span>
+        <span class="bg-404">404</span>
+        <span class="bg-404">404</span>
+        <span class="bg-404">404</span>
+        <span class="bg-404">404</span>
+        <span class="bg-404">404</span>
+        <span class="bg-404">404</span>
+        <span class="bg-404">404</span>
+        <span class="bg-404">404</span>
+        <span class="bg-404">404</span>
+    </div>
+
+    <div class="main-content">
+        <img src="../assets/icons/star-solid.svg" alt="icon" class="top-icon spin glow" />
+        <h2>how did we get here..?</h2>
+        <a href="/" class="btn _grow">
+            <span class="btn-text">take me back...</span>
+        </a>
+    </div>
+    <div class="cloud-wrap"></div>
+
+</body>
+
+</html>
+<script nonce="13579" src="../assets/scripts/float404.js"></script>
+<script nonce="13579">
+    document.addEventListener('keydown', function (event) {
+        if (event.key === "Escape") {
+            window.history.back(); // goes back one page
+        }
+    });
+</script>

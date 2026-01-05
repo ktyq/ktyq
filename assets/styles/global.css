@@ -1,0 +1,255 @@
+:root {
+    --bg-primary: #1D0F3B;
+    --bg-secondary: #6A49B1;
+
+    --color-primary: #E4D4E6;
+    --color-secondary: #6A49B1;
+    --color-tertiary: #1D0F3B;
+
+    /* --color-accent: #FF7A5C;
+    --color-error: #FF4C4C;
+    --color-success: #4CAF50; */
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Nunito", Arial, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to top, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    color: var(--color-primary);
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+/* .clouds {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    max-height: 200px;
+    background-image: url('clouds.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: cover;
+    pointer-events: none;
+    z-index: -1;
+} */
+
+.cloud-wrap {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 200px;
+    pointer-events: none;
+    z-index: -1;
+    background-image: url("clouds.png");
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    background-size: auto 200px;
+}
+
+.star {
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+}
+
+/* https://buttongenerator.com/generate */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: all 0.2s;
+    padding: 8px 12px;
+    color: var(--color-secondary);
+    background: var(--color-primary);
+    border-radius: 100px;
+    border: none;
+    min-width: 140px;
+    min-height: 40px;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+      background: #E3C2E7;
+  color: #6A49B1;
+}
+
+.spin {
+    animation: spin 10s linear infinite;
+}
+
+.glow {
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3))
+        /* drop-shadow(0 0 15px rgba(255, 255, 255, 0.2)); */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+  /* cr koiwaprimevera */
+
+    .pulse {
+      -webkit-animation: pop 2s ease-in-out infinite alternate;
+      animation: pop 2s ease-in-out infinite alternate;
+      -moz-animation: pop 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes pop {
+      from {
+        transform: scale(0.97)
+      }
+
+      50% {
+        transform: scale(1)
+      }
+
+      to {
+        transform: scale(0.97)
+      }
+    }
+
+    @-webkit-keyframes pop {
+      from {
+        -webkit-transform: scale(0.97)
+      }
+
+      50% {
+        -webkit-transform: scale(1)
+      }
+
+      to {
+        -webkit-transform: scale(0.97)
+      }
+    }
+/* font size */
+h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    /* min 1.5rem, scales with viewport, max 3rem */
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+}
+
+h2 {
+    font-size: clamp(1.25rem, 4vw, 2.5rem);
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 0;
+}
+
+h3 {
+    font-size: clamp(1.1rem, 3vw, 2rem);
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 0;
+}
+
+p,
+span,
+div {
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+/* font */
+@font-face {
+    font-family: "Nunito";
+    src: url("../../assets/fonts/Nunito.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("../../assets/fonts/Nunito-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Default */
+body {
+    cursor: url("../cursor/Normal.cur"), auto;
+}
+
+/* Links */
+a,
+button {
+    cursor: url("../cursor/Link.cur"), pointer;
+}
+
+/* Text input / selection */
+input,
+textarea {
+    cursor: url("../cursor/Text.cur"), text;
+}
+
+/* Busy / loading */
+body.loading {
+    cursor: url("../cursor/Busy.ani"), wait;
+}
+
+/* Working in background */
+body.background {
+    cursor: url("../cursor/WorkingInBackground.ani"), progress;
+}
+
+/* Help */
+.help {
+    cursor: url("../cursor/Help.cur"), help;
+}
+
+/* Not allowed */
+.disabled {
+    cursor: url("../cursor/Unavailable.cur"), not-allowed;
+}
+
+/* Move */
+.move {
+    cursor: url("../cursor/Move.cur"), move;
+}
+
+/* Precision */
+.precision {
+    cursor: url("../cursor/Precision.cur"), crosshair;
+}
+
+/* Resize */
+.resize-h {
+    cursor: url("../cursor/HorizontalResize.cur"), ew-resize;
+}
+
+.resize-v {
+    cursor: url("../cursor/VerticalResize.cur"), ns-resize;
+}
+
+.resize-d1 {
+    cursor: url("../cursor/DiagonalResize1.cur"), nwse-resize;
+}
+
+.resize-d2 {
+    cursor: url("../cursor/DiagonalResize2.cur"), nesw-resize;
+}

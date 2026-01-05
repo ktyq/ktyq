@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>title</title>
+  <link rel="icon" href="../assets/favicon/favicon.gif" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta http-equiv="Cache-Control" content="no-store">
+  <meta http-equiv="Pragma" content="no-cache">
+
+  <!-- <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    img-src 'self';
+    script-src 'self' 'nonce-13579';
+    style-src 'self' 'unsafe-inline';
+    object-src 'none';"> -->
+
+  <link rel="stylesheet" href="../assets/styles/global.css" type="text/css" media="all">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../assets/styles/tailwind.css">
+
+  <style>
+    .main-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .top-link {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      margin-top: 50px;
+      text-align: center;
+
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .top-icon {
+      width: 48px;
+      height: 48px;
+    }
+
+    .outline {
+      outline: 3px solid #E4D4E6;
+      margin: 12px auto;
+      max-width: 600px;
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 64px;
+    }
+
+    .container {
+      position: relative;
+      color: var(--color-primary);
+      width: 100%;
+      max-width: 600px;
+      background-color: rgba(228, 212, 230, 0.2);
+      padding: 16px;
+      border-radius: 12px;
+      outline: 3px solid #E4D4E6;
+      box-sizing: border-box;
+
+      text-align: left;
+    }
+
+    .title {
+      filter: drop-shadow(0px 1px 6A49B1black) drop-shadow(0 -1px 6A49B1) drop-shadow(1px 0 6A49B1) drop-shadow(-1px 0 6A49B1);
+    }
+  </style>
+
+  <style>
+    body {
+      overflow-y: auto;
+    }
+
+    .heading {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .btn-icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 12px;
+    }
+
+    .btn-text {
+      white-space: nowrap;
+    }
+
+    .items a.content-link {
+      display: inline-block;
+      text-decoration: underline;
+      color: inherit;
+      margin-left: 16px;
+      cursor: pointer;
+    }
+
+
+    .category {
+      margin-bottom: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <a href="index.html" class="top-link">
+      <img src="../assets/icons/sparkle-fill-svgrepo-com.svg" alt="icon" class="top-icon pulse" />
+      <p class="">the stars will guide me home</p>
+    </a>
+  </div>
+
+  <div class="main-content">
+    <div class="outline">
+
+      <div id="container" class="container">
+        <!-- <a href="/" class="heading"> 
+          <img src="../assets/icons/sparkle-fill-svgrepo-com.svg" alt="icon" class="btn-icon" />
+          <span class="btn-text">title</span>
+        </a>
+
+        <a href="another-page.html" class="content-link" target="_blank" rel="noopener">
+          content
+        </a> -->
+      </div>
+    </div>
+  </div>
+  <div class="cloud-wrap"></div>
+  <div id="star-layer1" class="star-layer"></div>
+  <div id="star-layer2" class="star-layer"></div>
+  <div id="star-layer3" class="star-layer"></div>
+</body>
+
+<script nonce="13579" src="../assets/scripts/data.js"></script>
+<script nonce="13579" src="../assets/scripts/links.js"></script>
+<script nonce="13579" src="../assets/scripts/stars.js"></script>
+
+<script nonce="13579">
+  document.addEventListener('keydown', function (event) {
+    if (event.key === "Escape") {
+      window.history.back(); // goes back one page
+    }
+  });
+</script>
+
+</html>

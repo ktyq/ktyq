@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medieval Name Generator</title>
+    <!-- https://www.playbuzz.com/katewalker10/what-is-your-medieval-name-according-to-your-birthday -->
+</head>
+<body>
+
+    <h1>Medieval Name Generator</h1>
+
+    <!-- Birthday selection -->
+    <label for="birthday">Select your Birthday:</label>
+    <input type="date" id="birthday" name="birthday">
+    <br><br>
+
+    <!-- Gender selection -->
+    <label for="gender">Select your Gender:</label>
+    <select id="gender" name="gender">
+        <option value="m">Male</option>
+        <option value="f">Female</option>
+    </select>
+    <br><br>
+    <!-- Generate Button -->
+    <button onclick="generateName()">Generate Name</button>
+    <h2 id="generated-name"></h2>
+    
+    <script>
+        const months = [
+            "January", "February", "March", "April", "May", "June", "July", "August", "September", 
+            "October", "November", "December"
+        ];
+        const days = [
+            "First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth",
+            "Eleventh", "Twelfth", "Thirteenth", "Fourteenth", "Fifteenth", "Sixteenth", "Seventeenth", 
+            "Eighteenth", "Nineteenth", "Twentieth", "Twenty-first", "Twenty-second", "Twenty-third", 
+            "Twenty-fourth", "Twenty-fifth", "Twenty-sixth", "Twenty-seventh", "Twenty-eighth", "Twenty-ninth", 
+            "Thirtieth", "Thirty-first"
+        ];
+        
+
+        function generateName() {
+            // Get birthday and gender values
+            const birthday = new Date(document.getElementById("birthday").value);
+            const gender = document.getElementById("gender").value;
+
+            if (isNaN(birthday.getTime())) {
+                alert("Please select a valid birthday.");
+                return;
+            }
+
+            const maleNames = [
+            "Ulric", "Baird", "Henry", "Oliver", "Fraden", "John", "Geoffrey", "Francis", "Simon", "Fendrel", 
+            "Frederick", "Thomas", "Arthur", "Cassius", "Richard", "Matthew", "Charles", "Reynard", "Favian", "Philip", 
+            "Zoricus", "Carac", "Alistair","Sadon", "Caine", "Gawain", "Godfrey", "Mericus", "Rowley", "Brom", "Cornell"
+        ];
+
+        const femaleNames = [
+            "Millicent", "Alianor", "Ellyn", "Sybbyl", "Jacquelyn", "Catherine", "Anne", "Thea", "Elizabeth", "Luella", 
+            "Mary", "Arabella", "Muriel", "Isabel", "Angmar", "Isolde", "Eleanor", "Josselyn", "Margaret", "Luanda", 
+            "Ariana", "Clarice", "Idla", "Claire", "Ryia", "Joan", "Clemence", "Morgaine", "Edith", "Nerida", "Ysmay"
+        ];
+        
+            const surnames = [
+                "Cabrera", "Greene", "Stewart", "Coastillon", "Rolfe", "Archer", "de Biville", "Golding", "Tudor", "Walter", 
+                "Buxton", "Felstead"
+            ];
+
+
+            const day = birthday.getDate();
+            const month = birthday.getMonth();
+
+            let name = "";
+           if (gender === "m") {
+            name += maleNames[day - 1] + " " + surnames[month];
+            } else if (gender === "f") {
+            name += femaleNames[day - 1] + " " + surnames[month];
+            }
+
+            document.getElementById("generated-name").textContent = "Generated Name: " + name;
+        }
+    </script>
+
+</body>
+</html>

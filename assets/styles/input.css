@@ -1,0 +1,98 @@
+/* @import "tailwindcss" source("./public/"); */
+@layer theme, base, components, utilities, colors;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+/* @import "tailwindcss/colors.css" layer(colors); */
+/* ./tailwindcss -i ./assets/styles/input.css -o ./assets/styles/tailwind.css --watch */
+
+@theme {
+  --color-pink-200: oklch(78.34% 0.0563 359.75);
+  --color-pink-100: oklch(85.52% 0.0352 339.27)
+
+  /* --cursor-auto: url(../files/cursor/Normal.cur), auto;
+  --cursor-default: url(../files/cursor/Normal.cur), default;
+  --cursor-text: url(../files/cursor/Text.cur), text;
+  --cursor-pointer: url(../files/cursor/Precision.cur), pointer;
+  --cursor-wait: url(../files/cursor/Busy.ani), wait;
+  --cursor-move: url(../files/cursor/Move.cur), move;
+  --cursor-help: url(../files/cursor/Help.cur), help;
+  --cursor-not-allowed: url(../files/cursor/Unavailable.cur), not-allowed;
+  --cursor-progress: url(../files/cursor/Working\ in\ background.ani), not-allowed;
+  --cursor-n-resize: url(../files/cursor/Vertical\ resize.cur), not-allowed;
+  --cursor-s-resize: url(../files/cursor/Vertical\ resize.cur), not-allowed;
+  --cursor-ns-resize: url(../files/cursor/Vertical\ resize.cur), not-allowed;
+  --cursor-w-resize: url(../files/cursor/Horizontal\ resize.cur), not-allowed;
+  --cursor-e-resize: url(../files/cursor/Horizontal\ resize.cur), not-allowed;
+  --cursor-ew-resize: url(../files/cursor/Horizontal\ resize.cur), not-allowed;
+  --cursor-ne-resize: url(../files/cursor/Diagonal\ resize\ 2.cur), not-allowed;
+  --cursor-sw-resize: url(../files/cursor/Diagonal\ resize\ 2.cur), not-allowed;
+  --cursor-nesw-resize: url(../files/cursor/Diagonal\ resize\ 2.cur), not-allowed;
+  --cursor-nw-resize: url(../files/cursor/Diagonal\ resize\ 1.cur), not-allowed;
+  --cursor-se-resize: url(../files/cursor/Diagonal\ resize\ 1.cur), not-allowed;
+  --cursor-nwse-resize: url(../files/cursor/Diagonal\ resize\ 1.cur), not-allowed; */
+}
+
+@layer base {
+  body {
+    background-color: #2f2540;
+    color: #f2f0ef;
+    font-family: "Nunito", Arial, sans-serif, serif;
+    margin: 0px;
+  }
+
+  .header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #897681;
+    color: #fff5f5;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    z-index: 1000;
+    text-decoration: none;
+    display: block;
+  }
+}
+
+@layer components {
+  .toggle-content {
+    display: none;
+    padding: 0px;
+  }
+
+  .toggle-button {
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 0px;
+  }
+
+  .toggle-content a {
+    color: #b54c8e;
+  }
+
+  .scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99999;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .scroll-top-btn:hover {
+    background-color: #c15895;
+  }
+
+  span.circle-up-icon {
+      background: url("../icons/circle-up-regular.svg");
+      height: 20px;
+      width: 20px;
+
+  }
+
+}

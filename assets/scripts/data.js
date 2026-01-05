@@ -1,0 +1,448 @@
+const data = [
+    {
+        "page": "code",
+        "category": {
+            "Job Opportunities": [
+                {
+                    "name": "Entrylevel - Tech Reskill Courses",
+                    "link": "https://www.entrylevel.net/"
+                },
+                {
+                    "name": "Open Doors - UX/UI Jobs",
+                    "link": "https://www.opendoorscareers.com/"
+                },
+                {
+                    "name": "Certificates / Badges",
+                    "link": "https://www.classcentral.com/report/free-certificates/"
+                },
+                {
+                    "name": "Startup Jobs",
+                    "link": "https://www.workatastartup.com/jobs"
+                },
+                {
+                    "name": "Gen She Jobs ",
+                    "link": "https://jobs.generationshe.co/"
+                },
+                {
+                    "name": "Aspiring Product Managers Jobs ",
+                    "link": "https://www.apmseason.com/"
+                },
+                {
+                    "name": "Job / Course Search ",
+                    "link": "https://www.prospects.ac.uk/"
+                },
+                {
+                    "name": "Coding Interview University",
+                    "link": "https://github.com/jwasham/coding-interview-university#why-use-it"
+                }
+            ],
+            "Learn to code": [
+                {
+                    "name": "Learn Anything",
+                    "link": "https://explorer.globe.engineer/\""
+                },
+                {
+                    "name": "Code with Minecraft",
+                    "link": "https://code.org/minecraft"
+                },
+                {
+                    "name": "Coding for kids",
+                    "link": "https://www.tynker.com/"
+                },
+                {
+                    "name": "Javascript Quiz",
+                    "link": "https://javascriptquiz.com/"
+                },
+                {
+                    "name": "TryHackMe - Cybersecurity Training",
+                    "link": "https://tryhackme.com/"
+                },
+                {
+                    "name": "HackTheBox - Learn Cybersecurity",
+                    "link": "https://www.hackthebox.com/"
+                },
+                {
+                    "name": "Vulnerable Design Examples",
+                    "link": "https://www.vulnhub.com/"
+                },
+                {
+                    "name": "Learn Git Branching",
+                    "link": "https://learngitbranching.js.org/"
+                },
+                {
+                    "name": "The Odin Project",
+                    "link": "https://www.theodinproject.com/"
+                },
+                {
+                    "name": "Computing Knowledge",
+                    "link": "https://sicp.sourceacademy.org/"
+                },
+                {
+                    "name": "Learn JavaScript",
+                    "link": "https://javascript.info/structure"
+                },
+                {
+                    "name": "Microsoft Microbit",
+                    "link": "https://makecode.microbit.org/#"
+                },
+                {
+                    "name": "Programming Blogs",
+                    "link": "https://www.commonlounge.com/"
+                }
+            ],
+            "Coding Games / Challenges": [
+{"name":"Coding Games","link":"https://www.codingame.com/start/"},
+{"name":"Battle with CSS","link":"https://cssbattle.dev/"},
+{"name":"Oh My Git","link":"https://ohmygit.org/"},
+{"name":"Can't Unsee","link":"https://cantunsee.space/"},
+{"name":"It's Centered That","link":"https://avark.agency/designers-eye/"},
+{"name":"Kern Type","link":"https://type.method.ac/#"},
+{"name":"Shape Type","link":"https://shape.method.ac/"},
+{"name":"Hex Invaders","link":"http://www.hexinvaders.com/"},
+{"name":"Bezier Game","link":"https://bezier.method.ac/"},
+{"name":"Pixel Game","link":"https://pixact.ly/"},
+{"name":"Cybersecurity Games","link":"https://overthewire.org/wargames/"}
+            ],
+            "Resources": [
+{"name":"Free UI Elements","link":"https://uiverse.io/elements"},
+{"name":">Free Figma Components","link":"https://www.figcomponents.com/"},
+{"name":"OverAPI - Cheatsheets","link":"https://overapi.com/"},
+{"name":"Web Design Inspiration","link":"https://tympanus.net/codrops/"},
+{"name":"UI Components","link":"https://uiplaybook.dev/://www.figcomponents.com/"},
+{"name":"Visualise Data Structures","link":"https://visualgo.net/en"},
+{"name":"Visualise Algorithms","link":"https://bost.ocks.org/mike/algorithms/"},
+{"name":"Fontjoy Font Pairings","link":"https://fontjoy.com/"},
+{"name":"Google Fonts","link":"https://fonts.google.com/"},
+{"name":"Old School Fonts","link":"https://int10h.org/oldschool-pc-fonts/"}
+            ],
+            "Generators/ Tools": [
+{"name":"AI Heatmap Gemerator","link":"https://attentioninsight.com/"},
+{"name":"Generate Design Brief","link":"https://goodbrief.io/https://javascriptquiz.com/"},
+{"name":"Text to SQL AI Converter","link":"https://www.text2sql.ai/"},
+{"name":"Code AI Converter","link":"https://www.codeconvert.ai/"},
+{"name":"HTML Code Generator","link":"https://www.html-code-generator.com/"},
+{"name":"Generate SVG Design Assets","link":"https://haikei.app/"},
+{"name":"AI Website Designer","link":"https://www.framer.com/features/ai/"},
+{"name":"Blackbox AI","link":"https://www.blackbox.ai/"},
+{"name":"Build and Deploy Web Apps (Py)","link":"https://reflex.dev/"},
+{"name":"UX Design Tools","link":"https://www.toools.design/"},
+{"name":"SQL Formatter","link":"https://poorsql.com/"},
+{"name":"Free Developer Tools","link":"https://freestuff.dev/"},
+{"name":"Custom Scrollbar Generator","link":"https://codepen.io/stephenpaton-tech/full/JjRvGmY"},
+{"name":"Debuild Build Web Apps","link":"https://debuild.app/"},
+{"name":"(Dead) Web 1.0 Website Maker","link":"https://clovercities.com"}
+            ],
+            "CSS / JS Animation Tools": [
+{"name":"Cubic Bezier Easing","link":"https://cubic-bezier.com/#.17,.67,.83,.67"},
+{"name":"GSAP - Animate with JS","link":"https://gsap.com/"},
+{"name":"Anime.js - Animate with JS","link":"https://animejs.com/"},
+{"name":"Splide - Carousel / Slider","link":"https://splidejs.com/"},
+{"name":"CSS Animation Library","link":"https://animate.style/"},
+{"name":"Animate SVG Files","link":"https://www.svgator.com/"},
+{"name":"Spline 3D Design Tool","link":"https://spline.design/"},
+{"name":"Motion Design Principles","link":"https://motion.zajno.com/"}
+            ],
+            "Misc": [
+{"name":"Silly Terminal Plugin","link":"https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/lol"}
+            ]
+        }
+    },
+    {
+        "page": "know",
+        "category": {
+            "Useful Tools": [
+{"name":"Various Online Tools","link":"https://www.kodytools.com/"},
+{"name":"PDF Tools","link":"https://www.ilovepdf.com/"},
+{"name":"TOS; Didn't Read","link":"https://tosdr.org/"},
+{"name":"Feel Better AI Bot","link":"https://feelbetterbot.com/"},
+{"name":"There's An AI For That","link":"https://theresanaiforthat.com/"},
+{"name":"Share Files Privately","link":"https://toffeeshare.com/"},
+{"name":"Script Memoriser","link":"https://www.linebyline.app/"},
+{"name":"Corrupt a File","link":"https://corrupt-a-file.net/"},
+{"name":"Feeling Poopy","link":"https://youfeellikeshit.com/index.html"},
+{"name":"Feeling Crappy","link":"https://ifeellikecrap.today/end.html"},
+{"name":"Browser Trackers","link":"https://coveryourtracks.eff.org/"},
+{"name":"Temporary Mail","link":"https://tempail.com/"},
+{"name":"Background Remover","link":"https://www.remove.bg/"},
+{"name":"Cooking Recipe Shorterner","link":"https://cooked.wiki/"},
+{"name":"Foundation Shade Finder","link":"https://www.findation.com/"},
+{"name":"Free Rice","link":"https://freerice.com/"},
+{"name":"Fake Detail Generator","link":"https://fakedetail.com/"},
+{"name":"Fake Name Generator","link":"https://www.fakenamegenerator.com/"},
+{"name":"SaltyAnimators Salary","link":"https://docs.google.com/spreadsheets/d/1hLki-RUHJXgYj_RJKWlwUXfrWUWEi9yIcyLzEifxYrY/edit?gid=143902278#gid=143902278"},
+{"name":"Ideation Tools","link":"http://creatingminds.org/tools/tools_ideation.htm"},
+{"name":"Thinking Tools","link":"https://untools.co/"},
+{"name":"FutureMe","link":"https://www.futureme.org/letters/new"},
+{"name":"Free Stuff Near You","link":"https://www.freecycle.org/"},
+{"name":"Twitter Emoji Tracker","link":"https://emojitracker.com/"},
+{"name":"Compare Countries","link":"https://www.ifitweremyhome.com/"}
+            ],
+            "Colour Resources" : [
+{"name":"Colour Gradient Generator","link":"https://meyerweb.com/eric/tools/color-blend/#:::hex"},
+{"name":"Image Palette","link":"http://www.cssdrive.com/imagepalette/"},
+{"name":"Accessible Colours","link":"https://accessible-colors.com/"},
+{"name":"Colour Contrast Checker","link":"https://webaim.org/resources/contrastchecker/"},
+{"name":"Colour Contrast Checker","link":"https://colourcontrast.cc/"},
+{"name":"AI Colour Palette Generator","link":"https://huemint.com/"},
+{"name":"Simple Colour Palette Generator","link":"https://pigment.shapefactory.co/"},
+{"name":"AI Palette Generator","link":"https://palettemaker.com/"},
+{"name":"Colour Palette Generator","link":"https://icolorpalette.com/color-palette-generator"},
+{"name":"Colour Scheme Generator","link":"https://www.schemecolor.com/"},
+{"name":"Colour Shade Generator","link":"https://www.shadegenerator.com/"},
+{"name":"Perceptual Colour Space","link":"https://bottosson.github.io/posts/oklab/"},
+{"name":"Word Colour Palette","link":"https://farbecolore.com/find.php"},
+{"name":"Colour Hue Test","link":"https://www.arealme.com/color-hue-test/en/"},
+{"name":"Birthday Colours","link":"https://toyhou.se/12598609.colorstrology-archive-"},
+{"name":"Birthday Colours","link":"https://htmlcss.jp/color/birth.html"},
+{"name":"Colour Contrasts and Combos","link":"https://randoma11y.com/"}
+            ],
+            "Inspiration": [
+{"name":"Pinterest Shuffles Inspiration","link":"https://www.pinterest.com/ideas/shuffles-by-pinterest/920870546808/"},
+{"name":"Art Prompts Idea Generator","link":"https://binnybun.itch.io/idea-generator"},
+{"name":"Game Idea Generator","link":"https://itssnowyowl.itch.io/game-idea-generator"},
+{"name":"Cool UI Inspo","link":"https://www.makemepulse.com/"},
+{"name":"Index of Aesthetics","link":"https://cari.institute/aesthetics"},
+{"name":"Royalty Free Photos","link":"https://dupephotos.com/"},
+{"name":"Cut Out Resources","link":"https://www.vishopper.com/"},
+{"name":"Game Character Models","link":"https://gamesfashionarchive.net/viewer/"},
+{"name":"Open Source Illustrations","link":"https://www.transhumans.xyz/"},
+{"name":"Notebook Carrd","link":"https://asuka-langley.carrd.co/#stickynotes"}
+            ],
+            "Software": [
+{"name":"Free Art Apps (PC)","link":"https://en.softonic.com/articles/5-free-art-apps-for-your-pc"},
+{"name":"Pixarra","link":"https://www.pixarra.com/"},
+{"name":"Photopea","link":"https://www.photopea.com/"},
+{"name":"Pixlr Photo Editor","link":"https://pixlr.com/editor/"},
+{"name":"Pixel Art App (iPad)","link":"https://pixaki.com/"},
+{"name":"Scrivener Writing","link":"https://www.literatureandlatte.com/"},
+{"name":"3D Interior Design","link":"https://www.homestyler.com/"},
+{"name":"3D Modelling App","link":"https://www.maxon.net/en/zbrush"},
+{"name":"Spine Animator","link":"https://esotericsoftware.com/spine-purchase"},
+{"name":"3D Viewer","link":"https://sketchfab.com/"}
+            ],
+            "Maker Spaces": [
+{"name":"Spirte Maker","link":"https://www.piskelapp.com/p/create/sprite"},
+{"name":"Voxel Creator","link":"https://voxelbuilder.com/"},
+{"name":"Mockup Maker","link":"https://artboard.studio/"},
+{"name":"Pixel Art Scaler","link":"https://lospec.com/pixel-art-scaler/"},
+{"name":"3D Gif Maker","link":"https://www.3dgifmaker.com/Squishy"},
+{"name":"Animagic","link":"https://animagic.app/"}
+            ],
+            "Education": [
+{"name":"Open Access Articles","link":"https://unpaywall.org/"},
+{"name":"Textbook Nova","link":"https://textbooknova.com/"},
+{"name":"Library Genesis","link":"https://libgenesis.net/"},
+{"name":"Sci-Hub","link":"https://www.sci-hub.st/"},
+{"name":"Free Vertebrae Models","link":"https://www.floridamuseum.ufl.edu/overt/"},
+{"name":"Citation Generator","link":"https://quillbot.com/citation-generator"},
+{"name":"Vision Simulator","link":"https://visionsimulations.com/index.htm"},
+{"name":"Science Visualiser","link":"https://www.vosviewer.com/"},
+{"name":"Slides Templates","link":"https://slidesgo.com/"}
+            ],
+            "Writing": [
+{"name":"Grammar Checker","link":"https://hemingwayapp.com/"},
+{"name":"Essay Writer","link":"https://m.essaybot.com/#/"},
+{"name":"AI Essay Writer","link":"https://jenni.ai/"},
+{"name":"AI Writer","link":"https://www.wordtune.com/"}
+            ],
+            "Music": [
+{"name":"Music Analysis","link":"https://musicstax.com/"},
+{"name":"Voice Generator","link":"https://uberduck.ai/speak"},
+{"name":"Ambience Sounds","link":"https://defonic.com/"},
+{"name":"Every Noise","link":"https://everynoise.com/"},
+{"name":"White Noise Generator","link":"https://mynoise.net/NoiseMachines/whiteRainNoiseGenerator.php"},
+{"name":"Mikutap","link":"https://aidn.jp/mikutap/"},
+{"name":"Patatap","link":"https://patatap.com/"},
+{"name":"ymck","link":"https://ymck.net/"},
+{"name":"Bitbucket 8-bit","link":"https://jummbus.bitbucket.io/"},
+{"name":"Beepbox 8-bit","link":"https://www.beepbox.co/"},
+{"name":"CardboardBox 8-bit","link":"https://hidden-realm.github.io/cardboardbox/"},
+{"name":"Xorberax Visualizer","link":"https://bxyoung89.github.io/xorberax-visualizer/?palette=27&image=60&song=4"},
+{"name":"Old Voice Tapes","link":"https://afterthetone.com/"},
+{"name":"Music Tool","link":"http://eeerik.com/"},
+{"name":"Spotify Playlist 1","link":"https://open.spotify.com/playlist/6fW4IA4D7Tx2yqVPwlVxWy?si=AAWbD-hoTSqPeZV3AxF3EQ&nd=1&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Fplaylist%2F6fW4IA4D7Tx2yqVPwlVxWy%3Fsi%3DAAWbD-hoTSqPeZV3AxF3EQ&feature=organic"},
+{"name":"Spotify Link 2","link":"https://open.spotify.com/playlist/4P9PwBkDrJbnmQ4gWmUDrN?si=NiTQDyQaQmuGj7sP-CD-_A&dl_branch=1&nd=1&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Fplaylist%2F4P9PwBkDrJbnmQ4gWmUDrN%3Fsi%3DNiTQDyQaQmuGj7sP-CD-_A%26dl_branch%3D1&feature=organic"}
+            ]
+        }
+    },
+    {
+        "page": "misc",
+        "category": {
+            "Reading Material": [
+{"name":"Talking Points for Life","link":"https://www.talkingpointsforlife.com/"},
+{"name":"How to Professionally Say","link":"https://howtoprofessionallysay.akashrajpurohit.com/"},
+{"name":"Microagressions","link":"https://www.themicropedia.org/"},
+{"name":"Space Elevator","link":"https://neal.fun/space-elevator/"},
+{"name":"Black Market Prices","link":"https://www.havocscope.com/"},
+{"name":"Bill Wurtz Questions","link":"https://billwurtz.com/questions/questions.html"},
+{"name":"The Egg","link":"http://www.galactanet.com/oneoff/theegg_mod.html"},
+{"name":"17776 Football","link":"https://www.sbnation.com/a/17776-football"},
+{"name":"Swan Crossing Project","link":"https://www.reddit.com/r/magpie_quill/comments/cs610i/swan_crossing_project_masterpost/"},
+{"name":"Big Five Personality","link":"https://www.theworldcounts.com/happiness/the-big-five-personality-factors-include"},
+{"name":"Political Compass","link":"https://www.politicalcompass.org/analysis2?ec=-6.88&soc=-3.85"},
+{"name":"Dewey Decimal Classes","link":"https://en.m.wikipedia.org/wiki/List_of_Dewey_Decimal_classes#Class_400_–_Language"},
+{"name":"Lost / Discontinued Words","link":"https://phrontistery.info/clw1.html"},
+{"name":"About Cyber Feminism","link":"https://cyberfeminismindex.com/about/"},
+{"name":"Decolonial Atlas","link":"https://decolonialatlas.wordpress.com/"},
+{"name":"Digital Media Blog","link":"https://two.compost.digital/"},
+{"name":"Web 1.1 Movement","link":"https://drevonor.com/"},
+{"name":"Public Accountability Website","link":"https://littlesis.org/"}
+            ],
+            "Site Mazes": [
+{"name":"The Useless Web","link":"https://theuselessweb.com/"},
+{"name":"Camerons World","link":"https://www.cameronsworld.net/"},
+{"name":"Fireman Comics","link":"https://www.somethingawful.com/hosted/firemancomics/archive.htm"},
+{"name":"Mackerelmedia Fish","link":"https://mackerelmediafish.com/#"},
+{"name":"yyyyyyy (weird)","link":"https://www.yyyyyyy.info/"},
+{"name":"Yvettes Bridal Formal","link":"https://yvettesbridalformal.p1r8.net/"},
+{"name":"I Love Mouchette","link":"https://ilovemouchette.virtualperson.org/"},
+{"name":"Entrance or Exit","link":"https://entranceorexit.net/about"},
+{"name":"Some Spanish Cult","link":"http://www.angeles-luz.es/espanol/default_es.htm"},
+{"name":"Interactive Windows93","link":"https://www.windows93.net/"},
+{"name":"Web of Old","link":"https://www.biostatisticien.eu/www.searchlores.org/words.htm"},
+{"name":"Planet 3d FX","link":"http://planet3dfx.com/"},
+{"name":"World Wide Lev","link":"https://www.csh.rit.edu/~tonyl/tours/datatour.html"},
+{"name":"Paperrad Net Art","link":"http://www.paperrad.org/newindex.html"},
+{"name":"Dreamcult","link":"https://dreamcult.xyz/"},
+{"name":"1996 Interactive Site..","link":"https://mouchette.org/index.html"},
+{"name":"Smurf Blogs","link":"https://bluebuddies.com/"},
+{"name":"Control House Cameras","link":"https://drivemeinsane.com/"},
+{"name":"Bill's World","link":"https://billsworld.neocities.org/"},
+{"name":"Website Map","link":"https://wilderness.land/"},
+{"name":"Stumble on Websites","link":"https://stumblingon.com/"}
+            ],
+            "Site Compilations": [
+{"name":"catraa","link":"https://catraa.neocities.org/favesites"},
+{"name":"sadgrl","link":"https://goblin-heart.net/sadgrl/"},
+{"name":"ytoo","link":"https://ytoo.org/"},
+{"name":"Sharkle","link":"https://sharkle.com/"},
+{"name":"duncjo01","link":"http://cs.gettysburg.edu/~duncjo01/"},
+{"name":"Comeandsee Rentry","link":"https://rentry.co/comeandsee"},
+{"name":"href.cool","link":"https://href.cool/"},
+{"name":"Compilations 1","link":"https://blog.spacehey.com/entry?id=720693"},
+{"name":"Compilations 2","link":"https://blog.spacehey.com/entry?id=938854"},
+{"name":"Compilations 3","link":"https://forum.spacehey.com/topic?id=3221"}
+            ],
+            "Personal Websites / Fansites": [
+{"name":"vastrecs","link":"https://vastrecs.neocities.org/"},
+{"name":"hekate","link":"https://hekate.neocities.org/"},
+{"name":"odditycommoddity","link":"https://odditycommoddity.neocities.org/"},
+{"name":"plasticdino","link":"https://plasticdino.neocities.org/"},
+{"name":"dokode","link":"https://dokode.moe/"},
+{"name":"Miku Fansite","link":"https://adilene.net/"},
+{"name":"Yokohama Kaidashi Kikou Fansite","link":"https://www.alpha.cafe/"},
+{"name":"Older Sims Games Fansite","link":"https://simworld.neocities.org/"},
+{"name":"Doll Reviews","link":"https://www.toyboxphilosopher.com/"}
+            ],
+            "Profile Flair": [
+{"name":"Upside Down Text","link":"https://www.upsidedowntext.com/"},
+{"name":"Kaomoji","link":"https://kaomoji.ru/en/"},
+{"name":"Earthbound Text Generator","link":"https://www.earthboundtext.com/"},
+{"name":"Undertale Textbox Generator","link":"https://www.demirramon.com/generators/undertale_text_box_generator"},
+{"name":"Blinkie Generator","link":"https://blinkies.cafe/"},
+{"name":"Gif Party Generator","link":"https://my.corgiorgy.com/"},
+{"name":"Userbox Maker","link":"https://www.yerich.net/userbox/"},
+{"name":"Glitter Text Maker","link":"https://picasion.com/glitter-maker/"},
+{"name":"Glitter Graphics","link":"https://www.glitter-graphics.com/"},
+{"name":"Symbols","link":"https://coolsymbol.com/"},
+{"name":"Various Graphics","link":"https://plumbum.neocities.org/"},
+{"name":"Cool Gifs","link":"https://coolgifs.neocities.org/"},
+{"name":"Cool Graphics","link":"https://archive.cinni.net/index.php"},
+{"name":"Cool Graphics 2","link":"https://graphic.neocities.org/directory"},
+{"name":"Y2K Gifs","link":"https://www.animatedgif.net/cartoons/cartoons.shtml"},
+{"name":"Status Update","link":"https://status.cafe/"},
+{"name":"TamaNOTchi Widget","link":"https://tamanotchi.world/"},
+{"name":"Gify Pet Website","link":"https://gifypet.neocities.org/"},
+{"name":"Old School Smileys","link":"http://www.mazeguy.net/smilies.html"},
+{"name":"Web Templates","link":"http://www.lovelyd.shukuya.com/tables3.php"}
+            ],
+            "Games": [
+{"name":"Steam Game Downloads","link":"https://www.reddit.com/r/SteamRip/wiki/index/games/"},
+{"name":"Cubefield","link":"https://www.cubefield.org.uk/"},
+{"name":"Mystic Square 8 Puzzle","link":"https://sliding.toys/mystic-square/8-puzzle/"},
+{"name":"Kuboble Puzzle","link":"https://kuboble.com/"},
+{"name":"WordHoop Game","link":"https://www.wordhoop.com/"},
+{"name":"Squiggly Maze Generator","link":"https://t-rexwave.itch.io/hand-drawn-maze-generator"},
+{"name":"Git Golf","link":"https://jhu.itch.io/git-golf"},
+{"name":"Ask Famous People","link":"https://www.askfamouspeople.com/"},
+{"name":"Flatmates","link":"https://tio.itch.io/flatmates"},
+{"name":"Cats Cradle","link":"https://georgioklironomos.itch.io/cats-cradle"},
+{"name":"iSpy","link":"https://ispy.heihei.resn.co/"},
+{"name":"Hunger Games Simulator","link":"https://brantsteele.net/hungergames/disclaimer.php"},
+{"name":"Dear Clarent","link":"https://imbernet.itch.io/dear-clarent"},
+{"name":"Virtual Escape Room","link":"https://www.enchambered.com/puzzles/"},
+{"name":"Katti Game","link":"https://kultisti.itch.io/katti"},
+{"name":"Sumplete","link":"https://sumplete.com/"},
+{"name":"Mausritter Adventure","link":"https://mausritter.com/"},
+{"name":"Sandspiel","link":"https://sandspiel.club/"},
+{"name":"Magnet Poetry","link":"https://goblin-heart.net/sadgrl/magnet-poetry/#"},
+{"name":"Spiral Toy","link":"https://nathanfriend.io/inspiral-web/"},
+{"name":"Draw With Text","link":"https://tholman.com/texter/"},
+{"name":"Fake Newspaper Clipping Generator","link":"https://www.fodey.com/generators/newspaper/snippet.asp"},
+{"name":"Word Search Generator","link":"https://wordsearchlabs.com/"},
+{"name":"Nintendo JP Site","link":"https://www.nintendo.co.jp/ngc/before/n2005_b.html"},
+{"name":"Pokemon Booster Pack Simulator","link":"https://pokemonboosterpack.com/"},
+{"name":"Older Game Maps","link":"https://noclip.website/"},
+{"name":"Free RPG / JP ROMs","link":"https://cdromance.com"},
+{"name":"Emulation/ROMs Info","link":"https://vimm.net/"},
+{"name":"3ds Homebrew","link":"https://3ds.hacks.guide/"},
+{"name":"Flash Player Emulator","link":"https://ruffle.rs/#downloads"},
+{"name":"Unreleased Game content","link":"https://tcrf.net/The_Cutting_Room_Floor"},
+{"name":"Relaxation Game","link":"https://alexanderperrin.com.au/paper/shorttrip/#"}
+            ],
+            "Quizzes": [
+{"name":"Incense Quiz","link":"https://ktestone.com/kapable.github.io/personalIncenseEng"},
+{"name":"Unrequited Love Candy Quiz","link":"https://ktestone.com/kapable.github.io/oneSidedLoveEng"},
+{"name":"International Personality Item Pool","link":"https://ipip.ori.org/"},
+{"name":"Difficult Person Test","link":"https://www.idrlabs.com/difficult-person/test.php"},
+{"name":"Guess My Mental Age From Drawing","link":"https://www.arealme.com/oekaki-mental-age/en/"},
+{"name":"OSPP 4 Temperments Test","link":"https://openpsychometrics.org/tests/O4TS/results.php?dat=MTAgMTMgMTQgMTU-"},
+{"name":"Colour Personality","link":"https://ktestone.com/kapable.github.io/personalColorEng/result/ISFP/"},
+{"name":"Modern Innocence Test","link":"https://theinnocencetest.com/"},
+{"name":"Average Comparison","link":"https://thanaverage.xyz/"},
+{"name":"Dichotomy Tests","link":"https://dichotomy-tests.pages.dev/"},
+{"name":"How Gay are You","link":"https://en.shindanmaker.com/a/618321"},
+{"name":"Why Are You Cute","link":"https://en.shindanmaker.com/699549"},
+{"name":"Sakinorva Cognitive Function Domain Test","link":"https://sakinorva.net/test/function_bunya#google_vignette"}
+            ],
+            "Watch Things": [
+{"name":"Barbie Movies Folder","link":"https://drive.google.com/drive/folders/1-haquav2KQosUnVwNfqoQjfxv1coVYtu"},
+{"name":"Barbie Movies","link":"https://moviesanywhere.com/collection/barbie"},
+{"name":"BFlix Movies","link":"https://blfix.pages.dev/"},
+{"name":"GOKU Movies","link":"https://goku.sx/movies"},
+{"name":"Cineb Movies","link":"https://cineb.rs/"},
+{"name":"Cinego Movies","link":"https://cinego.stream"},
+{"name":"Lookmovie Movies","link":"https://playerhd.top/lookmovie2/"},
+{"name":"HiAnime Animes","link":"https://hianime.to/"},
+{"name":"Animixplay Animes","link":"https://animixplay.com.im/"},
+{"name":"My 90's TV","link":"https://www.my90stv.com/"},
+{"name":"Flipnote Animations","link":"https://www.sudomemo.net/"},
+{"name":"Unlisted Videos","link":"https://unlistedvideos.com/videos.php"},
+{"name":"Old School YouTube","link":"https://www.vidlii.com/"},
+{"name":"2008 YouTube","link":"https://www.bitview.net/index.php"},
+{"name":"Find Twitch Streamers","link":"https://peer2peer.live"},
+{"name":"9/11 Live broadcasts","link":"https://911realtime.org/"},
+{"name":"Watch Toonami","link":"https://www.toonamiaftermath.com/"}
+            ],
+            "Misc / Random": [
+{"name":"Minecraft Sugar Texture","link":"https://minecraft.novaskin.me/profile/115522635368286881500"},
+{"name":"Picrew 494736","link":"https://picrew.me/ja/image_maker/494736"},
+{"name":"Amino Frame Tierlist","link":"https://tiermaker.com/create/amino-framesas-of-july-4th-2021-584962?presentationMode=true"},
+{"name":"My Tamanotchi","link":"https://tamanotchi.world/12944c"},
+{"name":"Dragon Cave","link":"https://forums.dragcave.net/topic/120519-the-newbie-gifting-project-thread/"},
+{"name":"Rambly Room","link":"https://rambly.app/#/rooms/solitary-fire-8"}
+            ], 
+            "Gimmick Sites": [
+{"name":"Pudding","link":"https://www.pudim.com.br/"},
+{"name":"Leaf","link":"http://www.leaf.com/"},
+{"name":"Cat / 4s","link":"https://cattherapy.neocities.org/"},
+{"name":"Japanese Screamer Website","link":"https://iruka459.web.fc2.com/index.html"}
+            ]
+        }
+    },
+    {
+        "random": "https://m.youtube.com/watch?v=vyhjYD7qKZA&feature=youtu.be (parker's cover)",
+        "a": "https://youtube.com/shorts/VDCGIV5c6QE?feature=share (ear pressure points)",
+        "b": "https://m.youtube.com/watch?v=Css5670MtP8 (how to do a lip thrill)"
+    }
+];

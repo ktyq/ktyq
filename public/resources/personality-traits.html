@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Traits</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- https://www.ongoingworlds.com/blog/2014/11/a-big-long-list-of-personality-traits/ -->
+     <!-- https://ideonomy.mit.edu/essays/traits.html -->
+</head>
+
+<body class="bg-gray-100 p-8">
+  <div class="container mx-auto">
+    <h1 class="text-3xl font-bold mb-8">Personality Traits List</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- Negative Traits Column -->
+      <div class="bg-white p-6 rounded-lg shadow-md h-96 overflow-y-auto">
+        <h2 class="text-xl font-semibold text-red-600 mb-4">Negative Traits</h2>
+        <ul id="negative-traits" class="list-disc list-inside text-gray-700">
+          <!-- Traits will be loaded here -->
+        </ul>
+      </div>
+
+      <!-- Positive Traits Column -->
+      <div class="bg-white p-6 rounded-lg shadow-md h-96 overflow-y-auto">
+        <h2 class="text-xl font-semibold text-green-600 mb-4">Positive Traits</h2>
+        <ul id="positive-traits" class="list-disc list-inside text-gray-700">
+          <!-- Traits will be loaded here -->
+        </ul>
+      </div>
+
+      <!-- Neutral Traits Column -->
+      <div class="bg-white p-6 rounded-lg shadow-md h-96 overflow-y-auto">
+        <h2 class="text-xl font-semibold text-blue-600 mb-4">Neutral Traits</h2>
+        <ul id="neutral-traits" class="list-disc list-inside text-gray-700">
+          <!-- Traits will be loaded here -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script>
+// Function to parse CSV and load traits
+async function loadTraitsFromCSV(file, elementId, columnIndex) {
+  try {
+    const response = await fetch(file);
+    const text = await response.text();
+    const rows = text.split('\n');
+    
+    const listElement = document.getElementById(elementId);
+    
+    // Start at index 1 to skip the header row
+    rows.slice(1).forEach(row => {
+      const columns = row.split(',');
+      if (columns[columnIndex] && columns[columnIndex].trim() !== '') {
+        const li = document.createElement('li');
+        li.textContent = columns[columnIndex].trim();
+        listElement.appendChild(li);
+      }
+    });
+  } catch (error) {
+    console.error(`Error loading ${file}:`, error);
+  }
+}
+
+// Load traits for each column from CSV
+document.addEventListener('DOMContentLoaded', () => {
+  loadTraitsFromCSV('traits.csv', 'negative-traits', 0);  // Negative traits in the first column
+  loadTraitsFromCSV('traits.csv', 'positive-traits', 1);  // Positive traits in the second column
+  loadTraitsFromCSV('traits.csv', 'neutral-traits', 2);   // Neutral traits in the third column
+});
+</script>
+</html>
