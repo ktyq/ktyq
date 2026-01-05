@@ -40,7 +40,7 @@ if (pageData) {
 
         // Add icon
         const icon = document.createElement('img');
-        icon.src = "../assets/icons/sparkle-fill-svgrepo-com.svg";
+        icon.src = "https://ktyq.github.io/ktyq/assets/icons/sparkle-fill-svgrepo-com.svg";
         icon.alt = "icon";
         icon.className = "btn-icon";
 
