@@ -1,4 +1,4 @@
-const dataa = [
+const data = [
     {
         "page": "explore",
         "category": {
